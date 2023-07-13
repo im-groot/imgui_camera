@@ -1,0 +1,51 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "C:\\msys64\\mingw32\\bin\\g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${fileDirname}\\main.cpp",
+				"${fileDirname}\\imgui\\*.cpp",
+				"${fileDirname}\\common\\*.cpp",
+				"${fileDirname}\\common\\Fonts\\*.cpp",
+				//"${fileDirname}\\3rdparty\\nativefiledialog-extended\\src\\nfd_win.cpp",
+				"${fileDirname}\\3rdparty\\glad\\src\\glad.c",
+				"-IC:\\msys64\\mingw32\\include",
+				// "-IC:\\msys64\\mingw32\\include\\gtk-3.0",
+				// "-IC:\\msys64\\mingw32\\include\\glib-2.0",
+				// "-IC:\\msys64\\mingw32\\lib\\glib-2.0\\include",
+				// "-IC:\\msys64\\mingw32\\include\\pango-1.0",
+				// "-IC:\\msys64\\mingw32\\include\\harfbuzz",
+				// "-IC:\\msys64\\mingw32\\include\\cairo",
+				// "-IC:\\msys64\\mingw32\\include\\gdk-pixbuf-2.0",
+				// "-IC:\\msys64\\mingw32\\include\\atk-1.0",
+				"-I${fileDirname}\\include",
+				"-I${fileDirname}\\imgui",
+				"-I${fileDirname}\\common",
+				"-I${fileDirname}\\3rdparty",
+				"-I${fileDirname}\\3rdparty\\glad\\include",
+				//"-I${fileDirname}\\3rdparty\\nativefiledialog-extended\\src\\include",
+				"-LC:\\msys64\\mingw32\\lib",
+				"-lglfw3",
+				"-lopengl32",
+				"-lgdi32",
+				"-limm32",
+				"-lgtk-3",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\msys64\\mingw32\\bin\\g++.exe"
+		}
+	]
+}
