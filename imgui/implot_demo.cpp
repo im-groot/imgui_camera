@@ -32,6 +32,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <iostream>
 
 #ifdef _MSC_VER
 #define sprintf sprintf_s
@@ -389,9 +390,9 @@ void Demo_ShadedPlots() {
 //-----------------------------------------------------------------------------
 
 void Demo_ScatterPlots() {
-    srand(0);
+    srand((unsigned int)ImGui::GetTime());
     static float xs1[100], ys1[100];
-    for (int i = 0; i < 100; ++i) {
+    for (int i = -50; i < 50; ++i) {
         xs1[i] = i * 0.01f;
         ys1[i] = xs1[i] + 0.1f * ((float)rand() / (float)RAND_MAX);
     }
